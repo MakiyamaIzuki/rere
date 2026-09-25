@@ -1,0 +1,15 @@
+[package]
+name = "rere"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "A C-compatible static library for loading undirected edge lists into CSR graphs"
+readme = "README.md"
+
+[lib]
+crate-type = ["staticlib"]
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
